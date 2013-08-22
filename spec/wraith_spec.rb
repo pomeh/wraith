@@ -2,12 +2,13 @@ require 'rspec-given'
 require 'wraith'
 require 'wraith_manager'
 
+WraithManager.reset_shots_folder
+Dir.mkdir('shots/test')
+
 describe Wraith do
   Given(:config_name) { 'spec/test_config' }
-  Given { WraithManager.reset_shots_folder }
   Given(:test_url1) { "http://www.live.bbc.co.uk/news" }
   Given(:test_url2) { "http://www.live.bbc.co.uk/russian" }
-  Given { Dir.mkdir('shots/test') } 
   Given(:test_image1) { 'shots/test/test1.png' }
   Given(:test_image2) { 'shots/test/test2.png' }
   Given(:diff_image) { 'shots/test/test_diff.png' }
