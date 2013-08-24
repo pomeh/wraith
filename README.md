@@ -44,6 +44,22 @@ On Ubuntu 12.04, you will need to apt-get the following packages:
 And then download the PhantomJS binary package from
 [http://phantomjs.org/](http://phantomjs.org/).
 
+
+On windows, you will need to download and install manually all requirements:
+
+* PhantomJS archive from http://phantomjs.org/ (Webkit based), or SlimerJS
+archive from http://slimerjs.org/ (Gecko based). In both case, you'll need to
+decompress the archive and add its path to your PATH environnement variable
+* ImageMagick its [download page](http://www.imagemagick.org/script/binary-releases.php#windows).
+During installation, ensure that ImageMagick is added to your PATH environnement
+variable. If not sure, run the test explained in the page above (basically,
+execute following command into a Command Prompt: convert logo:
+logo.gif; identify logo.gif; imdisplay)
+* Ruby through RubyInstaller at http://rubyinstaller.org/. Or you can
+[use an alternative way](http://www.ruby-lang.org/en/downloads/) to install it
+on your system.
+
+
 ## Installation
 
 ```sh
